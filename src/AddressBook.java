@@ -13,18 +13,16 @@ public class AddressBook extends DefaultListModel<BuddyInfo> {
         this.addElement(buddy);
     }
 
-    public void addBuddy(AddressBook address){
-        for(int i = 0; i<address.size(); i++){
-            this.addBuddy(address.get(i));
-        }
-    }
-
     public void removeBuddy(BuddyInfo buddy){
         this.removeElement(buddy);
     }
 
 
     public static void main(String[] args){
+        BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
+        AddressBook addressBook = new AddressBook();
+        addressBook.addBuddy(buddy);
+        addressBook.removeBuddy(buddy);
         System.out.println("Address Book");
     }
 
