@@ -19,12 +19,20 @@ public class AddressBook {
         }
     }
 
-
     public BuddyInfo removeBuddy(int index){
         if(index >=0 && index <myBuddies.size()){
             return myBuddies.remove(index);
         }
         return null;
+    }
+
+    public String getBuddyInfo(int index){
+        if(index >=0 && index <myBuddies.size()){
+            BuddyInfo buddy;
+            buddy = myBuddies.get(index);
+            return buddy.getName() + "'s address is: " + buddy.getAddress() + " Phone: " + buddy.getPhoneNumber();
+        }
+        return "invalid index";
     }
 
 
